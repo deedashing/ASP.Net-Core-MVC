@@ -1,0 +1,30 @@
+﻿@model List<ASPNETCore_CRUD.Controllers.Student>
+@{
+    ViewData["Title"] = "Home Page";
+
+    //View bag
+    //var students = ViewBag.Students as List<Asp.net_project.Controllers.Student>;
+
+    //View data
+    //var students = ViewData["Students"] as List<Asp.net_project.Controllers.Student>;
+
+
+}
+
+<div>
+   <table class="table">
+       <tr>
+           <th>ID</th>
+           <th>Namme</th>
+           <th>Email</th>
+       </tr>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.ID</td>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+            </tr>
+        }
+    </table>
+</div>
